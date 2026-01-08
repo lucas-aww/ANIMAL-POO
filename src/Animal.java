@@ -11,12 +11,16 @@ public abstract class Animal {
         return nom;
     }
 
-    // --- NOUVELLE MÉTHODE STATIQUE ---
-    // Elle décrit une règle commune à TOUS les animaux (classe)
+    // Méthode statique : Règle valable pour TOUS
     public static void afficherRegle() {
-        System.out.println("Règle commune : Tous les animaux ont besoin d'oxygène.");
+        System.out.println("Règle : Tous les animaux ont besoin d'oxygène.");
     }
 
-    // Méthode d'instance (abstraite)
+    // C'est la façon de manger "par défaut" si l'enfant ne la change pas.
+    public void eat() {
+        System.out.println("Miam, je mange de la nourriture classique.");
+    }
+
+    // Méthode ABSTRAITE
     public abstract void produireSon();
 }
