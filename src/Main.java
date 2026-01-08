@@ -16,5 +16,8 @@ public class Main {
         maVache.eat("de l'herbe");
         monChien.eat();
         Animal.afficherRegle();
+
+        System.out.println("\n=== Test de l'interface Pet ===");
+        monChien.play();
     }
 }
