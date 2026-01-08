@@ -1,31 +1,36 @@
 public abstract class Animal {
-    private String nom;
-    private int age;
+    public String espece;
+    protected String couleur;
+    private int poids;
 
-    public Animal(String nom, int age) {
-        this.nom = nom;
-        this.age = age;
+    public Animal(String espece, String couleur, int poids) {
+        this.espece = espece;
+        this.couleur = couleur;
+        this.poids = poids;
     }
 
-    public String getNom() {
-        return nom;
+    public int getPays() {
+        return poids;
     }
 
-    // Méthode statique : Règle valable pour TOUS
+    public void afficherInfos() {
+        System.out.println("=== Dans Animal ===");
+        System.out.println("Public : " + espece);
+        System.out.println("Protected : " + couleur);
+        System.out.println("Private : " + poids + " kg");
+    }
+
     public static void afficherRegle() {
         System.out.println("Règle : Tous les animaux ont besoin d'oxygène.");
     }
 
-    // --- VERSION 1 de eat() : Sans paramètre ---
     public void eat() {
         System.out.println("Miam, je mange de la nourriture classique.");
     }
 
-    // --- VERSION 2 de eat() : AVEC paramètre (Surcharge) ---
     public void eat(String nourriture) {
         System.out.println("Miam, je mange " + nourriture);
     }
 
-    // Méthode ABSTRAITE
     public abstract void produireSon();
 }

@@ -1,23 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        // Création des objets
-        Cow maVache = new Cow("Vachette", 4);
-        Dog monChien = new Dog("Rex", 2);
+        Cow maVache = new Cow("Vache", "Blanche et noire", 500);
+        Dog monChien = new Dog("Chien", "Marron", 30);
 
-        // --- Test de la Vache ---
-        System.out.println("--- VACHE ---");
-        maVache.eat();                    // Version sans paramètre
-        maVache.eat("de l'herbe");        // Version avec paramètre
-        maVache.produireSon();
+        System.out.println("=== Accès depuis Main ===");
+        System.out.println("Public : " + maVache.espece);
+        System.out.println("Private via getter : " + maVache.getPays());
 
-        // --- Test du Chien ---
-        System.out.println("\n--- CHIEN ---");
-        monChien.eat();                   // Version sans paramètre (redéfinie)
-        monChien.eat("des croquettes");   // Version avec paramètre (celle du parent)
-        monChien.produireSon();
+        maVache.testerAcces();
+        monChien.testerAcces();
+        maVache.afficherInfos();
 
-        // --- Règle ---
-        System.out.println("\n--- RÈGLE ---");
+        System.out.println("\n=== Autres méthodes ===");
+        maVache.eat();
+        maVache.eat("de l'herbe");
+        monChien.eat();
         Animal.afficherRegle();
     }
 }

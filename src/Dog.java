@@ -1,7 +1,7 @@
 public class Dog extends Animal {
 
-    public Dog(String nom, int age) {
-        super(nom, age);
+    public Dog(String espece, String couleur, int poids) {
+        super(espece, couleur, poids);
     }
 
     @Override
@@ -12,5 +12,12 @@ public class Dog extends Animal {
     @Override
     public void eat() {
         System.out.println("Croc croc ! Je mange des os.");
+    }
+
+    public void testerAcces() {
+        System.out.println("=== Dans Dog ===");
+        System.out.println("Public : " + espece);
+        System.out.println("Protected : " + couleur);
+        System.out.println("Private via getter : " + getPays());
     }
 }
