@@ -1,13 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        // 1. Instancier un objet de classe Cow
-        Cow maVache = new Cow("Vachette", 5);
+        // 1. Instanciation de l'objet Cow
+        Cow maVache = new Cow("Vachette", 4);
 
-        // 2. Afficher le nom de l'animal
-        System.out.println("Nom de l'animal : " + maVache.getNom());
-
-        // 3. Appeler la méthode permettant de produire un son
-        System.out.print("Son de l'animal : ");
+        // 2. Appel de la méthode d'instance (sur l'objet 'maVache')
+        System.out.print("L'animal " + maVache.getNom() + " fait : ");
         maVache.produireSon();
+
+        // 3. Appel de la méthode statique (sur la classe 'Animal')
+        Animal.afficherRegle();
     }
 }
