@@ -51,7 +51,7 @@ public class Main {
             animal.produireSon();
         }
 
-        // --- BOUCLE FOR-EACH (encore plus simple) ---
+        // --- BOUCLE FOR-EACH ---
         System.out.println("\n=== Avec for-each ===");
         for (Animal animal : listeAnimaux) {
             System.out.println("- " + animal.espece + " (" + animal.couleur + ")");

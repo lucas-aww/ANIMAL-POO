@@ -1,4 +1,4 @@
-public class Cat extends Animal implements Pet {
+public class Cat extends Animal implements Pet, Wild {
 
     public Cat(String espece, String couleur, int poids) {
         super(espece, couleur, poids);
@@ -17,6 +17,11 @@ public class Cat extends Animal implements Pet {
     @Override
     public void play() {
         System.out.println("Le chat poursuit une balle !");
+    }
+
+    @Override
+    public void hunt() {
+        System.out.println("Le chat chasse les oiseaux et les souris !");
     }
 
     public void testerAcces() {
